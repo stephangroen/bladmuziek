@@ -17,6 +17,7 @@ foreach ($picklists['data'] as $picklist)
     if (count($picklist['products']) === 1 && $picklist['products'][0]['productcode'] == '999998')
     {
         $apiclient->cancelPicklist($picklist['idpicklist']);
-        echo 'Cancelled picklist: ' . $picklist['picklistid'] . PHP_EOL;
     }
 }
+
+echo 'Picklists cancelled.';
